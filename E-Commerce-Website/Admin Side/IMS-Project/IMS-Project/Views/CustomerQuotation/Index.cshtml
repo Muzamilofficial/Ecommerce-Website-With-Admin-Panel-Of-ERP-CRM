@@ -1,0 +1,229 @@
+﻿
+@{
+    ViewBag.Title = "Customer Qoutation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Example</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <style>
+        /* CSS for alignment and styling */
+        label {
+            display: inline-block;
+            width: 120px;
+        }
+
+        select, input[type="number"], input[type="text"] {
+            width: 70%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+
+        #update-button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 40%;
+            margin-left: 26%;
+            margin-top: 20px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 40%;
+            margin-left: 26%;
+            margin-top: 20px;
+        }
+
+        h1 {
+            margin-top: 5%;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 3%;
+            margin-bottom: 10%;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tbody tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#datepicker").datepicker();
+        });
+
+        function editRequest(reqQuotationId, productName, supplierName, quantity, productDate) {
+            $("#purchase-order-id").val(reqQuotationId);
+            $("#product").val(productName);
+            $("#supplier").val(supplierName);
+            $("#quantity").val(quantity);
+            $("#datepicker").val(productDate);
+
+            // Show the "Update" button and hide the "Request" button
+            $("#update-button").show();
+            $("input[type='submit']").hide();
+        }
+    </script>
+</head>
+<body>
+    @using (Html.BeginForm("SubmitRequest", "CustomerQuotation", FormMethod.Post))
+    {
+        <label for="purchase-order-id">Purchase Order Req ID:</label>
+        <input type="text" id="purchase-order-id" name="purchaseorderid" readonly>
+        <br>
+
+        <label for="product">Product:</label>
+        <input type="text" id="product" name="product" readonly>
+        <br>
+
+        <label for="supplier">Customer:</label>
+        <select id="supplier" name="supplier">
+            @foreach (var customers in ViewBag.Customers as List<IMS_Project.Models.Customer>)
+            {
+                <option value="@customers.CustomerID">@customers.First_Name</option>
+            }
+        </select>
+        <br>
+
+        <label for="quantity">Quantity Needed:</label>
+        <input type="number" id="quantity" name="quantity" readonly>
+        <br>
+
+        <label for="quantity2">Quantity Have:</label>
+        <input type="number" id="quantity2" name="quantity2">
+        <br>
+
+        <label for="priceperunit">Price Per Unit:</label>
+        <input type="number" id="priceperunit" name="priceperunit">
+        <br>
+
+        <label for="datepicker">Quotation Date:</label>
+        <input type="text" id="datepicker" name="datepicker">
+        <br>
+
+        <input type="submit" value="Request">
+    }
+
+    <h1 style="text-align:center;">Select Sales Order Requests</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ReqQuotation ID</th>
+                <th>Product</th>
+                <th>Customer</th>
+                <th>Quantity Needed</th>
+                <th>Quotation Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var request in Model)
+{
+    var product = (ViewBag.Products as List<IMS_Project.Models.Product>).FirstOrDefault(p => p.ProductID == request.Product);
+    var customer = (ViewBag.Customers as List<IMS_Project.Models.Customer>).FirstOrDefault(c => c.CustomerID == request.Customer);
+
+    var productName = product != null ? product.Name : string.Empty;
+    var customerName = customer != null ? customer.First_Name : string.Empty;
+
+    <tr>
+        <td>@request.ReqQoutationID</td>
+        <td>@productName</td>
+        <td>@customerName</td>
+        <td>@request.Quantity</td>
+        <td>@request.ProductDate</td>
+        <td>
+            <a href="#" class="update-icon" data-id="@request.ReqQoutationID"
+               onclick="editRequest('@request.ReqQoutationID', '@productName', '@customerName', '@request.Quantity', '@request.ProductDate')">
+                <i class="fas fa-edit"></i>
+            </a>
+
+        </td>
+    </tr>
+}
+
+            @section scripts {
+                <script>
+                    $(function () {
+                        $("#update-button").click(function () {
+                            var purchaseOrderId = $("#purchase-order-id").val();
+                            var product = $("#product").val();
+                            var supplier = $("#supplier").val();
+                            var quantity = $("#quantity").val();
+                            var pricePerUnit = $("#price-per-unit").val();
+                            var totalPrice = $("#total-price").val();
+
+                            $.ajax({
+                                url: '@Url.Action("UpdateRequest", "RequestforQoutation")',
+                                type: 'POST',
+                                data: {
+                                    purchaseOrderId: purchaseOrderId,
+                                    product: product,
+                                    supplier: supplier,
+                                    quantity: quantity,
+                                    pricePerUnit: pricePerUnit,
+                                    totalPrice: totalPrice
+                                },
+                                success: function (result) {
+                                    location.reload(); // Reload the page to reflect the updated data
+                                },
+                                error: function (xhr, status, error) {
+                                    // Handle the error case if required
+                                }
+                            });
+                        });
+                    });
+                    function editRequest(reqQoutationId, productName, supplierName, quantity, productDate) {
+                        $("#purchase-order-id").val(reqQoutationId);
+                        $("#product").val(productName);
+                        $("#quantity").val(quantity);
+                        $("#datepicker").val(productDate);
+
+                        // Find the index of the supplier in the combo box options
+                        var supplierIndex = $("#supplier option").filter(function () {
+                            return $(this).text() === supplierName;
+                        }).index();
+
+                        // Set the selected index of the combo box
+                        $("#supplier").prop("selectedIndex", supplierIndex);
+
+                        // Show the "Update" button and hide the "Request" button
+                        $("#update-button").show();
+                        //$("input[type='submit']").hide();
+                    }
+
+                </script>
+            }
+        </tbody>
+    </table>
+
+</body>
+</html>
+

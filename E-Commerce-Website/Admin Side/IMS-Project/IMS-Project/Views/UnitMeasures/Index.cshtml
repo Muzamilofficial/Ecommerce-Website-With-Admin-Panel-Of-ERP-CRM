@@ -1,0 +1,195 @@
+﻿@{
+    ViewBag.Title = "Unit Measures";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Example</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <style>
+        /* CSS for alignment and styling */
+        label {
+            display: inline-block;
+            width: 160px;
+        }
+
+        select, input[type="number"], input[type="text"], textarea {
+            width: 70%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+
+        input[type="submit"], input[type="button"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 40%;
+            margin-left: 26%;
+            margin-top: 20px;
+        }
+
+        h1 {
+            margin-top: 5%;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 3%;
+            margin-bottom: 10%;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tbody tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    @using (Html.BeginForm("Create", "UnitMeasures", FormMethod.Post))
+    {
+        <div>
+            <label for="unitMeasure">Unit of Measure:</label>
+            <input type="text" id="unitMeasure" name="unitMeasure" required />
+        </div>
+
+        <div>
+            <label for="description">Description:</label>
+            <input type="text" id="description" name="description" required />
+        </div>
+
+        <div>
+            <label for="abbreviation">Abbreviation:</label>
+            <input type="text" id="abbreviation" name="abbreviation" required />
+        </div>
+
+        <div id="editButtonContainer" style="display: none;">
+            <input type="button" id="updateButton" value="Update" />
+        </div>
+        <div id="submitButtonContainer">
+            <input type="submit" value="Submit" />
+        </div>
+    }
+
+    <h2>Unit Measures</h2>
+
+    <table>
+        <tr>
+            <th>S.No</th>
+            <th>Unit of Measure</th>
+            <th>Description</th>
+            <th>Abbreviation</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        @foreach (var unitMeasure in ViewBag.UnitMeasures)
+        {
+            <tr>
+                <td>@unitMeasure.UnitMeasureID</td>
+                <td>@unitMeasure.UnitMeasure</td>
+                <td>@unitMeasure.Description</td>
+                <td>@unitMeasure.Abbrevation</td>
+                <td>
+                    <a href="#" class="editIcon" data-id="@unitMeasure.UnitMeasureID">
+                        <img src="~/Content/Images/1891025_circle_compose_draw_edit_write_icon.png" height="30" alt="Edit" />
+                    </a>
+                </td>
+                <td>
+                    <a href="#" class="deleteIcon" data-id="@unitMeasure.UnitMeasureID">
+                        <img src="~/Content/Images/d.png" height="30" alt="Delete" />
+                    </a>
+                </td>
+            </tr>
+        }
+    </table>
+
+    <script>
+        $(document).ready(function () {
+            $('.editIcon').click(function () {
+                var unitMeasureId = $(this).data('id');
+                var unitMeasure = $('td:eq(1)', $(this).closest('tr')).text();
+                var description = $('td:eq(2)', $(this).closest('tr')).text();
+                var abbreviation = $('td:eq(3)', $(this).closest('tr')).text();
+
+                $('#unitMeasure').val(unitMeasure);
+                $('#description').val(description);
+                $('#abbreviation').val(abbreviation);
+                $('#updateButton').data('id', unitMeasureId);
+
+                $('#submitButtonContainer').hide();
+                $('#editButtonContainer').show();
+            });
+
+            $('#updateButton').click(function () {
+                var unitMeasureId = $(this).data('id');
+                var unitMeasure = $('#unitMeasure').val();
+                var description = $('#description').val();
+                var abbreviation = $('#abbreviation').val();
+
+                if (unitMeasure === '' || description === '' || abbreviation === '') {
+                    alert('Please fill in all fields.');
+                    return;
+                }
+
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("Update", "UnitMeasures")',
+                    data: { UnitMeasureID: unitMeasureId, unitMeasure: unitMeasure, description: description, abbreviation: abbreviation },
+                    success: function () {
+                        location.reload();
+                    },
+                    error: function () {
+                        alert('An error occurred while updating the unit measure.');
+                    }
+                });
+
+                // Reset the form
+                $('#unitMeasure').val('');
+                $('#description').val('');
+                $('#abbreviation').val('');
+                $('#updateButton').removeData('id');
+
+                $('#editButtonContainer').hide();
+                $('#submitButtonContainer').show();
+            });
+
+            $('.deleteIcon').click(function () {
+                var unitMeasureId = $(this).data('id');
+                if (confirm('Are you sure you want to delete this unit measure?')) {
+                    $.ajax({
+                        type: "POST",
+                        url: '@Url.Action("Delete", "UnitMeasures")',
+                        data: { UnitMeasureID: unitMeasureId },
+                        success: function () {
+                            location.reload();
+                        },
+                        error: function () {
+                            alert('An error occurred while deleting the unit measure.');
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+    </body>
+</html>

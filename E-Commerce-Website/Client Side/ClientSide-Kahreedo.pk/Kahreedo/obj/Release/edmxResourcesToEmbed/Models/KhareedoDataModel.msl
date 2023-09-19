@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="KahreedoModelsStoreContainer" CdmEntityContainer="KhareedoEntities">
+    <EntitySetMapping Name="admin_Employee">
+      <EntityTypeMapping TypeName="KahreedoModels.admin_Employee">
+        <MappingFragment StoreEntitySet="admin_Employee">
+          <ScalarProperty Name="PhotoPath" ColumnName="PhotoPath" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="DateofBirth" ColumnName="DateofBirth" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="EmpID" ColumnName="EmpID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="admin_Login">
+      <EntityTypeMapping TypeName="KahreedoModels.admin_Login">
+        <MappingFragment StoreEntitySet="admin_Login">
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="RoleType" ColumnName="RoleType" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="EmpID" ColumnName="EmpID" />
+          <ScalarProperty Name="LoginID" ColumnName="LoginID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Categories">
+      <EntityTypeMapping TypeName="KahreedoModels.Category">
+        <MappingFragment StoreEntitySet="Categories">
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="Picture2" ColumnName="Picture2" />
+          <ScalarProperty Name="Picture1" ColumnName="Picture1" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="KahreedoModels.Customer">
+        <MappingFragment StoreEntitySet="Customers">
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="LastLogin" ColumnName="LastLogin" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="Mobile2" ColumnName="Mobile2" />
+          <ScalarProperty Name="Mobile1" ColumnName="Mobile1" />
+          <ScalarProperty Name="Phone2" ColumnName="Phone2" />
+          <ScalarProperty Name="Phone1" ColumnName="Phone1" />
+          <ScalarProperty Name="AltEmail" ColumnName="AltEmail" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Organization" ColumnName="Organization" />
+          <ScalarProperty Name="DateofBirth" ColumnName="DateofBirth" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Last_Name" ColumnName="Last Name" />
+          <ScalarProperty Name="First_Name" ColumnName="First Name" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="genMainSliders">
+      <EntityTypeMapping TypeName="KahreedoModels.genMainSlider">
+        <MappingFragment StoreEntitySet="genMainSlider">
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="BtnText" ColumnName="BtnText" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="OfferTag" ColumnName="OfferTag" />
+          <ScalarProperty Name="AltText" ColumnName="AltText" />
+          <ScalarProperty Name="ImageURL" ColumnName="ImageURL" />
+          <ScalarProperty Name="MainSliderID" ColumnName="MainSliderID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="genPromoRights">
+      <EntityTypeMapping TypeName="KahreedoModels.genPromoRight">
+        <MappingFragment StoreEntitySet="genPromoRight">
+          <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="OfferTag" ColumnName="OfferTag" />
+          <ScalarProperty Name="AltText" ColumnName="AltText" />
+          <ScalarProperty Name="ImageURL" ColumnName="ImageURL" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="PromoRightID" ColumnName="PromoRightID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Orders">
+      <EntityTypeMapping TypeName="KahreedoModels.Order">
+        <MappingFragment StoreEntitySet="Order">
+          <ScalarProperty Name="CancelOrder" ColumnName="CancelOrder" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="DeliveryDate" ColumnName="DeliveryDate" />
+          <ScalarProperty Name="Deliver" ColumnName="Deliver" />
+          <ScalarProperty Name="ShippingDate" ColumnName="ShippingDate" />
+          <ScalarProperty Name="Shipped" ColumnName="Shipped" />
+          <ScalarProperty Name="DispatchedDate" ColumnName="DispatchedDate" />
+          <ScalarProperty Name="DIspatched" ColumnName="DIspatched" />
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+          <ScalarProperty Name="isCompleted" ColumnName="isCompleted" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="Taxes" ColumnName="Taxes" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="ShippingID" ColumnName="ShippingID" />
+          <ScalarProperty Name="PaymentID" ColumnName="PaymentID" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderDetails">
+      <EntityTypeMapping TypeName="KahreedoModels.OrderDetail">
+        <MappingFragment StoreEntitySet="OrderDetails">
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="OrderDetailsID" ColumnName="OrderDetailsID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Payments">
+      <EntityTypeMapping TypeName="KahreedoModels.Payment">
+        <MappingFragment StoreEntitySet="Payment">
+          <ScalarProperty Name="PaymentDateTime" ColumnName="PaymentDateTime" />
+          <ScalarProperty Name="Balance" ColumnName="Balance" />
+          <ScalarProperty Name="DebitAmount" ColumnName="DebitAmount" />
+          <ScalarProperty Name="CreditAmount" ColumnName="CreditAmount" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="PaymentID" ColumnName="PaymentID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PaymentTypes">
+      <EntityTypeMapping TypeName="KahreedoModels.PaymentType">
+        <MappingFragment StoreEntitySet="PaymentType">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+          <ScalarProperty Name="PayTypeID" ColumnName="PayTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="KahreedoModels.Product">
+        <MappingFragment StoreEntitySet="Products">
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Picture4" ColumnName="Picture4" />
+          <ScalarProperty Name="Picture3" ColumnName="Picture3" />
+          <ScalarProperty Name="Picture2" ColumnName="Picture2" />
+          <ScalarProperty Name="Picture1" ColumnName="Picture1" />
+          <ScalarProperty Name="LongDescription" ColumnName="LongDescription" />
+          <ScalarProperty Name="ShortDescription" ColumnName="ShortDescription" />
+          <ScalarProperty Name="OfferBadgeClass" ColumnName="OfferBadgeClass" />
+          <ScalarProperty Name="OfferTitle" ColumnName="OfferTitle" />
+          <ScalarProperty Name="AddBadge" ColumnName="AddBadge" />
+          <ScalarProperty Name="AltText" ColumnName="AltText" />
+          <ScalarProperty Name="ImageURL" ColumnName="ImageURL" />
+          <ScalarProperty Name="ProductAvailable" ColumnName="ProductAvailable" />
+          <ScalarProperty Name="UnitOnOrder" ColumnName="UnitOnOrder" />
+          <ScalarProperty Name="UnitInStock" ColumnName="UnitInStock" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="UnitWeight" ColumnName="UnitWeight" />
+          <ScalarProperty Name="OldPrice" ColumnName="OldPrice" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="QuantityPerUnit" ColumnName="QuantityPerUnit" />
+          <ScalarProperty Name="SubCategoryID" ColumnName="SubCategoryID" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RecentlyViews">
+      <EntityTypeMapping TypeName="KahreedoModels.RecentlyView">
+        <MappingFragment StoreEntitySet="RecentlyViews">
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="ViewDate" ColumnName="ViewDate" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="RViewID" ColumnName="RViewID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Reviews">
+      <EntityTypeMapping TypeName="KahreedoModels.Review">
+        <MappingFragment StoreEntitySet="Review">
+          <ScalarProperty Name="isDelete" ColumnName="isDelete" />
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+          <ScalarProperty Name="Review1" ColumnName="Review" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="ReviewID" ColumnName="ReviewID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="KahreedoModels.Role">
+        <MappingFragment StoreEntitySet="Roles">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ShippingDetails">
+      <EntityTypeMapping TypeName="KahreedoModels.ShippingDetail">
+        <MappingFragment StoreEntitySet="ShippingDetails">
+          <ScalarProperty Name="PostCode" ColumnName="PostCode" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Province" ColumnName="Province" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="ShippingID" ColumnName="ShippingID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubCategories">
+      <EntityTypeMapping TypeName="KahreedoModels.SubCategory">
+        <MappingFragment StoreEntitySet="SubCategory">
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="Picture2" ColumnName="Picture2" />
+          <ScalarProperty Name="Picture1" ColumnName="Picture1" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="SubCategoryID" ColumnName="SubCategoryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Suppliers">
+      <EntityTypeMapping TypeName="KahreedoModels.Supplier">
+        <MappingFragment StoreEntitySet="Suppliers">
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="ContactTitle" ColumnName="ContactTitle" />
+          <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Wishlists">
+      <EntityTypeMapping TypeName="KahreedoModels.Wishlist">
+        <MappingFragment StoreEntitySet="Wishlist">
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="WishlistID" ColumnName="WishlistID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

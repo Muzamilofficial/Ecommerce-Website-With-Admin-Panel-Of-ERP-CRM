@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="398e074ea8894131ba6e89e076c4f77a" Name="Diagram1">
+        <EntityTypeShape EntityType="KahreedoModels.admin_Employee" Width="1.5" PointX="0.75" PointY="5.25" />
+        <EntityTypeShape EntityType="KahreedoModels.admin_Login" Width="1.5" PointX="3" PointY="1" />
+        <EntityTypeShape EntityType="KahreedoModels.Category" Width="1.5" PointX="0.75" PointY="10.25" />
+        <EntityTypeShape EntityType="KahreedoModels.Customer" Width="1.5" PointX="5.25" PointY="5.125" />
+        <EntityTypeShape EntityType="KahreedoModels.genMainSlider" Width="1.5" PointX="5.75" PointY="0.75" />
+        <EntityTypeShape EntityType="KahreedoModels.genPromoRight" Width="1.5" PointX="3" PointY="16.75" />
+        <EntityTypeShape EntityType="KahreedoModels.Order" Width="1.5" PointX="5.25" PointY="25" />
+        <EntityTypeShape EntityType="KahreedoModels.OrderDetail" Width="1.5" PointX="7.5" PointY="19" />
+        <EntityTypeShape EntityType="KahreedoModels.Payment" Width="1.5" PointX="3" PointY="28.125" />
+        <EntityTypeShape EntityType="KahreedoModels.PaymentType" Width="1.5" PointX="0.75" PointY="28.5" />
+        <EntityTypeShape EntityType="KahreedoModels.Product" Width="1.5" PointX="5.25" PointY="12.875" />
+        <EntityTypeShape EntityType="KahreedoModels.RecentlyView" Width="1.5" PointX="7.5" PointY="12.375" />
+        <EntityTypeShape EntityType="KahreedoModels.Review" Width="1.5" PointX="10.5" PointY="15" />
+        <EntityTypeShape EntityType="KahreedoModels.Role" Width="1.5" PointX="0.75" PointY="1.375" />
+        <EntityTypeShape EntityType="KahreedoModels.ShippingDetail" Width="1.5" PointX="3" PointY="24.375" />
+        <EntityTypeShape EntityType="KahreedoModels.SubCategory" Width="1.5" PointX="3" PointY="20" />
+        <EntityTypeShape EntityType="KahreedoModels.Supplier" Width="1.5" PointX="3" PointY="11.875" />
+        <EntityTypeShape EntityType="KahreedoModels.Wishlist" Width="1.5" PointX="7.5" PointY="15.5" />
+        <AssociationConnector Association="KahreedoModels.FK_admin_Login_admin_Employee" />
+        <AssociationConnector Association="KahreedoModels.FK_admin_Login_Roles" />
+        <AssociationConnector Association="KahreedoModels.FK_genPromoRight_Categories" />
+        <AssociationConnector Association="KahreedoModels.FK_Products_Categories" />
+        <AssociationConnector Association="KahreedoModels.FK_SubCategory_Categories" />
+        <AssociationConnector Association="KahreedoModels.FK_Order_Customers" />
+        <AssociationConnector Association="KahreedoModels.FK_RecentlyViews_Customers" />
+        <AssociationConnector Association="KahreedoModels.FK_Review_Customers" />
+        <AssociationConnector Association="KahreedoModels.FK_Wishlist_Customers" />
+        <AssociationConnector Association="KahreedoModels.FK_Order_Payment" />
+        <AssociationConnector Association="KahreedoModels.FK_Order_ShippingDetails" />
+        <AssociationConnector Association="KahreedoModels.FK_OrderDetails_Order" />
+        <AssociationConnector Association="KahreedoModels.FK_OrderDetails_Products" />
+        <AssociationConnector Association="KahreedoModels.FK_Payment_PaymentType" />
+        <AssociationConnector Association="KahreedoModels.FK_Products_SubCategory" />
+        <AssociationConnector Association="KahreedoModels.FK_Products_Suppliers" />
+        <AssociationConnector Association="KahreedoModels.FK_RecentlyViews_Products" />
+        <AssociationConnector Association="KahreedoModels.FK_Review_Products" />
+        <AssociationConnector Association="KahreedoModels.FK_Wishlist_Products" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

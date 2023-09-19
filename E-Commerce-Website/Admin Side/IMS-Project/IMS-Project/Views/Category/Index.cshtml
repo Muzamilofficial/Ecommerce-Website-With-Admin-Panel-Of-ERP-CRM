@@ -1,0 +1,183 @@
+﻿@{
+    ViewBag.Title = "Category";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Example</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <style>
+        /* CSS for alignment and styling */
+        label {
+            display: inline-block;
+            width: 160px;
+        }
+
+        select, input[type="number"], input[type="text"], textarea {
+            width: 70%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+
+        input[type="submit"], input[type="button"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 40%;
+            margin-left: 26%;
+            margin-top: 20px;
+        }
+
+        h1 {
+            margin-top: 5%;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 3%;
+            margin-bottom: 10%;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tbody tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    @using (Html.BeginForm("Create", "Category", FormMethod.Post))
+    {
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+        </div>
+
+        <div>
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" required></textarea>
+        </div>
+
+        <div id="editButtonContainer" style="display: none;">
+            <input type="button" id="updateButton" value="Update" />
+        </div>
+        <div id="submitButtonContainer">
+            <input type="submit" value="Submit" />
+        </div>
+    }
+
+    <h2>Categories</h2>
+
+    <table>
+        <tr>
+            <th>S.no</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Edit</th>
+        </tr>
+        @foreach (var category in ViewBag.Categories)
+        {
+            <tr>
+                <td>@category.CategoryID</td>
+                <td>@category.Name</td>
+                <td>@category.Description</td>
+                <td>
+                    <a href="#" class="editIcon" data-id="@category.CategoryID">
+                        <img src="~/Content/Images/1891025_circle_compose_draw_edit_write_icon.png" height="30" alt="Edit" />
+                    </a>
+                </td>
+                <td>
+                    <a href="#" class="deleteIcon" data-id="@category.CategoryID">
+                        <img src="~/Content/Images/d.png" height="30" alt="Delete" />
+                    </a>
+                </td>
+            </tr>
+        }
+    </table>
+
+    <script>
+        $(document).ready(function () {
+            $('.editIcon').click(function () {
+                var categoryId = $(this).data('id');
+                var name = $('td:eq(1)', $(this).closest('tr')).text();
+                var description = $('td:eq(2)', $(this).closest('tr')).text();
+
+                $('#name').val(name);
+                $('#description').val(description);
+                $('#updateButton').data('id', categoryId);
+
+                $('#submitButtonContainer').hide();
+                $('#editButtonContainer').show();
+            });
+
+            $('#updateButton').click(function () {
+                var categoryId = $(this).data('id');
+                var name = $('#name').val();
+                var description = $('#description').val();
+
+                if (name === '' || description === '') {
+                    alert('Please fill in all fields.');
+                    return;
+                }
+
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("Update", "Category")',
+                    data: { CategoryID: categoryId, name: name, description: description },
+                    success: function () {
+                        location.reload();
+                    },
+                    error: function () {
+                        alert('An error occurred while updating the category.');
+                    }
+                });
+
+                // Reset the form
+                $('#name').val('');
+                $('#description').val('');
+                $('#updateButton').removeData('id');
+
+                $('#editButtonContainer').hide();
+                $('#submitButtonContainer').show();
+            });
+
+            $('.deleteIcon').click(function () {
+                var categoryId = $(this).data('id');
+                if (confirm('Are you sure you want to delete this category?')) {
+                    $.ajax({
+                        type: "POST",
+                        url: '@Url.Action("Delete", "Category")',
+                        data: { CategoryID: categoryId },
+                        success: function () {
+                            location.reload();
+                        },
+                        error: function () {
+                            alert('An error occurred while deleting the category.');
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

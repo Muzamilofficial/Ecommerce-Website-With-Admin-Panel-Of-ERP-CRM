@@ -1,0 +1,350 @@
+﻿@{
+    ViewBag.Title = "Supplier Credit Note";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Example</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!-- HTML code -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <style>
+        /* CSS for alignment and styling */
+        label {
+            display: inline-block;
+            width: 120px;
+        }
+
+        select, input[type="number"], input[type="text"], #paymentDate {
+            width: 70%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 40%;
+            margin-left: 26%;
+            margin-top: 20px;
+        }
+
+        h1 {
+            margin-top: 5%;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 3%;
+            margin-bottom: 10%;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tbody tr:hover {
+            background-color: #ddd;
+        }
+
+        /* Modal dialog styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+            .close:hover,
+            .close:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+            }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+
+<body>
+    @using (Html.BeginForm("SubmitRequest", "SupplierPayment", FormMethod.Post))
+    {
+        <div>
+            <label for="invoiceId">Invoice ID:</label>
+            <input type="text" id="invoiceId" name="invoiceId" />
+        </div>
+        <div>
+            <label for="supplierId">Supplier:</label>
+            <select id="supplierId" name="supplierId">
+                @foreach (var supplier in ViewBag.SupplierList)
+                {
+                    <option value="@supplier.Value">@supplier.Text</option>
+                }
+            </select>
+        </div>
+        <div>
+            <label for="paymentDate">Payment Date:</label>
+            <input type="date" id="paymentDate" name="paymentDate" />
+        </div>
+
+        <div>
+            <label for="paymentTerm">Payment Term:</label>
+            <input type="text" id="paymentTerm" name="paymentTerm" />
+        </div>
+
+        <div>
+            <label for="createdDate">Created Date:</label>
+            <input type="text" id="createdDate" name="createdDate" readonly value="@DateTime.Now.ToString("yyyy-MM-dd")" />
+        </div>
+
+        <div>
+            <label for="taxId">Tax:</label>
+            <select id="taxId" name="taxId">
+                @foreach (var tax in ViewBag.TaxList)
+                {
+                    <option value="@tax.Value">@tax.Text</option>
+                }
+            </select>
+        </div>
+
+        <div>
+            <label for="totalAmount">Total Amount:</label>
+            <input type="number" id="totalAmount" name="totalAmount" />
+        </div>
+
+        <div>
+            <label for="netAmount">Net Amount:</label>
+            <input type="number" id="netAmount" name="netAmount" />
+        </div>
+
+        <input type="submit" value="Submit" />
+    }
+
+
+    @functions {
+    private string GetTaxRate(int? taxId)
+    {
+        foreach (var tax in ViewBag.TaxList)
+        {
+            if (tax.Value == taxId.ToString())
+            {
+                return tax.Text;
+            }
+        }
+        return "";
+    }
+}
+
+    <table>
+        <thead>
+            <tr>
+                <th>Invoice ID</th>
+                <th>Payment Date</th>
+                <th>Payment Term</th>
+                <th>Created Date</th>
+                <th>Tax</th>
+                <th>Total Amount</th>
+                <th>Net Amount</th>
+                <th>Supplier</th>
+                <th>Generate Invoice</th> <!-- New column -->
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var supplierPayment in ViewBag.SupplierPayments)
+            {
+                <tr>
+                    <td>@supplierPayment.invoiceId</td>
+                    <td>@supplierPayment.PaymentDate.ToString("yyyy-MM-dd")</td>
+                    <td>@supplierPayment.PaymentTerm</td>
+                    <td>@supplierPayment.CreatedDate.ToString("yyyy-MM-dd")</td>
+                    <td>@GetTaxRate(supplierPayment.Tax)</td>
+                    <td>@supplierPayment.Totalamount</td>
+                    <td>@supplierPayment.NetAmount</td>
+                    <td>@supplierPayment.Sup</td>
+                    <td>
+                        <button class="generate-invoice-button" data-invoice-id="@supplierPayment.invoiceId">
+                            Generate Invoice
+                        </button>
+                    </td>
+                    <td>
+                        <button class="delete-button" data-id="@supplierPayment.SupplierPaymentID">
+                            <i class="fas fa-trash"></i> Delete
+                        </button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+
+    <script>
+        // Submit form using AJAX to prevent page reload
+        $('form').submit(function (event) {
+            event.preventDefault();
+
+            // Validate textboxes
+            var invoiceId = $('#invoiceId').val();
+            var paymentDate = $('#paymentDate').val();
+            var paymentTerm = $('#paymentTerm').val();
+            var totalAmount = $('#totalAmount').val();
+            var netAmount = $('#netAmount').val();
+
+            // Check if textboxes are filled and have numbers greater than 0
+            if (invoiceId === "" || paymentDate === "" || paymentTerm === "" || totalAmount === "" || netAmount === "") {
+                alert("Please fill in all the fields.");
+                return;
+            }
+
+            if (parseInt(paymentTerm) <= 0 || parseFloat(totalAmount) <= 0 || parseFloat(netAmount) <= 0) {
+                alert("Please enter numbers greater than 0.");
+                return;
+            }
+
+            $.ajax({
+                url: $(this).attr('action'),
+                type: $(this).attr('method'),
+                data: $(this).serialize(),
+                success: function (response) {
+                    if (response.success) {
+                        // Show success popup
+                        alert(response.message);
+                        // Reload the page
+                        location.reload();
+                    } else {
+                        // Show error popup
+                        alert(response.message);
+                    }
+                },
+                error: function () {
+                    // Show error popup
+                    alert("An error occurred while submitting the request.");
+                }
+            });
+        });
+
+        // Confirm delete record
+        $('.delete-button').click(function () {
+            if (confirm("Are you sure you want to delete this record?")) {
+                // Perform delete operation
+                var recordId = $(this).data('id');
+                $.ajax({
+                    url: '/SupplierPayment/DeletePayment',
+                    type: 'POST',
+                    data: { paymentId: recordId },
+                    success: function (response) {
+                        if (response.success) {
+                            // Show success popup
+                            alert(response.message);
+                            // Reload the page
+                            location.reload();
+                        } else {
+                            // Show error popup
+                            alert(response.message);
+                        }
+                    },
+                    error: function () {
+                        // Show error popup
+                        alert("An error occurred while deleting the record.");
+                    }
+                });
+            }
+        });
+
+        $('.generate-invoice-button').click(function () {
+            var invoiceId = $(this).data('invoice-id');
+
+            // Logic to fetch the current column data from the table
+            var invoiceData = $(this).closest('tr').find('td').map(function () {
+                return $(this).text();
+            }).get();
+
+            // Generate the PDF content using the invoiceData
+            var pdfContent = '<h1>AR MOTOR PARTS INVOICE</h1>';
+
+            // Add the image to the PDF content
+            pdfContent += '<img src="' + location.origin + '/Content/Images/logo.png" alt="logo" />';
+            pdfContent += '<table style="border-collapse: collapse;">';
+            pdfContent += '<tr>';
+            pdfContent += '<th style="border: 1px solid black; padding: 5px;">Invoice ID</th>';
+            pdfContent += '<th style="border: 1px solid black; padding: 5px;">Payment Date</th>';
+            pdfContent += '<th style="border: 1px solid black; padding: 5px;">Payment Term</th>';
+            pdfContent += '<th style="border: 1px solid black; padding: 5px;">Created Date</th>';
+            pdfContent += '<th style="border: 1px solid black; padding: 5px;">Tax</th>';
+            pdfContent += '<th style="border: 1px solid black; padding: 5px;">Total Amount</th>';
+            pdfContent += '<th style="border: 1px solid black; padding: 5px;">Net Amount</th>';
+            pdfContent += '<th style="border: 1px solid black; padding: 5px;">Supplier</th>';
+            pdfContent += '</tr>';
+            for (var i = 0; i < 8; i++) {
+                pdfContent += '<td style="border: 1px solid black; padding: 5px;">' + invoiceData[i] + '</td>';
+            }
+            pdfContent += '</tr>';
+            pdfContent += '</table>';
+
+
+            // Create a new window or iframe for the PDF
+            var pdfWindow = window.open('', '_blank');
+
+            // Set the HTML content of the new window or iframe
+            pdfWindow.document.open();
+            pdfWindow.document.write('<html><head><title>Invoice</title></head><body>');
+            pdfWindow.document.write(pdfContent);
+            pdfWindow.document.write('</body></html>');
+            pdfWindow.document.close();
+
+            // Print the PDF
+            pdfWindow.print();
+        });
+
+
+
+
+
+
+
+
+    </script>
+            </body>
+</html>

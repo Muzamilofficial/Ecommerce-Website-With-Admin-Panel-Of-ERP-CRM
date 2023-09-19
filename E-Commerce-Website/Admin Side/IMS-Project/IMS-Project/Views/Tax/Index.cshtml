@@ -1,0 +1,207 @@
+﻿@model List<IMS_Project.Models.tbl_Tax>
+@{
+    ViewBag.Title = "Tax";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tax</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <style>
+        /* CSS for alignment and styling */
+        label {
+            display: inline-block;
+            width: 160px;
+        }
+
+        select, input[type="number"], input[type="text"] {
+            width: 70%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+
+        input[type="submit"], input[type="button"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 40%;
+            margin-left: 26%;
+            margin-top: 20px;
+        }
+        #updateBtn {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 40%;
+            margin-left: 26%;
+            margin-top: 20px;
+        } h1 {
+            margin-top: 5%;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 3%;
+            margin-bottom: 10%;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tbody tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+    <script>
+        function validateForm() {
+            var taxRate = document.getElementById("TaxRate").value;
+            var taxValue = document.getElementById("TaxValue").value;
+
+            if (taxRate <= 0 || taxValue <= 0) {
+                alert("Tax Rate and Tax Value must be greater than 0.");
+                return false;
+            }
+        }
+
+        function editRecord(taxID, taxRate, taxCode, taxValue) {
+            document.getElementById("TaxID").value = taxID;
+            document.getElementById("TaxRate").value = taxRate;
+            document.getElementById("TaxCode").value = taxCode;
+            document.getElementById("TaxValue").value = taxValue;
+
+            document.getElementById("submitBtn").style.display = "none";
+            document.getElementById("updateBtn").style.display = "inline-block";
+        }
+    </script>
+    <style>
+        .edit-icon::before {
+            content: "\270E";
+        }
+
+        .delete-icon::before {
+            content: "\2716";
+        }
+    </style>
+</head>
+<body>
+    <h2>Index</h2>
+@using (Html.BeginForm("Index", "Tax", FormMethod.Post, new { onsubmit = "return validateForm()" }))
+{
+        <div>
+            <label for="TaxRate">Tax Rate:</label>
+            <input type="number" step="0.01" id="TaxRate" name="TaxRate" required>
+        </div>
+
+        <div>
+            <label for="TaxCode">Tax Code:</label>
+            <input type="text" id="TaxCode" name="TaxCode" required>
+        </div>
+
+        <div>
+            <label for="TaxValue">Tax Value:</label>
+            <input type="number" step="0.01" id="TaxValue" name="TaxValue" required>
+        </div>
+
+        <input type="hidden" id="TaxID" name="TaxID">
+        <input type="submit" value="Submit" id="submitBtn">
+        <button type="button" style="display:none;" id="updateBtn">Update</button>
+    }
+    <h3>Tax Records</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>S.No</th>
+                <th>Tax Rate</th>
+                <th>Tax Code</th>
+                <th>Created Date</th>
+                <th>Tax Value</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var tax in Model)
+            {
+                <tr>
+                    <td>@tax.TaxID</td>
+                    <td>@tax.TaxRate</td>
+                    <td>@tax.Taxcode</td>
+                    <td>@tax.CreatedDate</td>
+                    <td>@tax.TaxValue</td>
+                    <td>
+                        <a href="#" class="edit-icon" title="Edit" onclick="editRecord('@tax.TaxID', '@tax.TaxRate', '@tax.Taxcode', '@tax.TaxValue')"></a>
+
+                    </td>
+                    <td>
+                        @using (Html.BeginForm("Delete", "Tax", new { id = tax.TaxID }, FormMethod.Post))
+                        {
+                            @Html.AntiForgeryToken()
+                            <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this tax record?')">Delete</button>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <script>
+        $(document).ready(function () {
+            $("#updateBtn").click(function () {
+                var taxID = $("#TaxID").val();
+                var taxRate = $("#TaxRate").val();
+                var taxCode = $("#TaxCode").val();
+                var taxValue = $("#TaxValue").val();
+
+                // Check if any of the textboxes are empty
+                if (taxRate.trim() === "" || taxCode.trim() === "" || taxValue.trim() === "") {
+                    alert("Please fill in all textboxes.");
+                    return;
+                }
+
+                $.ajax({
+                    url: "@Url.Action("Update", "Tax")",
+                    type: "POST",
+                    data: {
+                        TaxID: taxID,
+                        TaxRate: taxRate,
+                        TaxCode: taxCode,
+                        TaxValue: taxValue
+                    },
+                    success: function (result) {
+                        if (result.success) {
+                            alert("Record updated successfully.");
+                            window.location.reload();
+                        } else {
+                            alert("Failed to update record.");
+                        }
+                    },
+                    error: function () {
+                        alert("An error occurred while updating the record.");
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

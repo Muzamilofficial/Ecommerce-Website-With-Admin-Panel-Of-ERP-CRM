@@ -1,0 +1,297 @@
+﻿
+@{
+    ViewBag.Title = "Sales Order";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using System.Linq
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Example</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"></script>
+
+
+    <style>
+        /* CSS for alignment and styling */
+        label {
+            display: inline-block;
+            width: 120px;
+        }
+
+        select,
+        input[type="number"],
+        input[type="text"] {
+            width: 70%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 40%;
+            margin-left: 26%;
+            margin-top: 20px;
+        }
+
+        h1 {
+            margin-top: 5%;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 3%;
+            margin-bottom: 10%;
+        }
+
+        th,
+        td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tbody tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <div>
+        <form id="editForm" method="post" action="/PurchaseOrder/SubmitRequest">
+            @Html.AntiForgeryToken()
+
+            <label for="supplierQoutationId">Customer Qoutation ID:</label>
+            <input type="text" id="supplierQoutationId" name="supplierQoutationId" readonly>
+
+            <br />
+            <label for="reqQoutationId">Req Qoutation ID:</label>
+            <input type="text" id="reqQoutationId" name="reqQoutationId" readonly>
+
+            <br />
+
+            <label for="product">Product:</label>
+            <input type="text" id="product" name="product" readonly>
+
+            <br />
+
+            <label for="supplier">Customer:</label>
+            <input type="text" id="supplier" name="supplier" readonly>
+
+            <br />
+
+            <label for="quantityNeeded">Quantity Needed:</label>
+            <input type="text" id="quantityNeeded" name="quantityNeeded" readonly>
+
+            <br />
+
+            <label for="supplierQuantity">Customer Quantity:</label>
+            <input type="text" id="supplierQuantity" name="supplierQuantity" readonly>
+
+            <br />
+
+            <label for="unitPrice">Unit Price:</label>
+            <input type="text" id="unitPrice" name="unitPrice" readonly>
+
+            <br />
+            <label for="datepicker">Date To Deliver:</label>
+            <input type="text" id="datepicker" readonly name="datepicker">
+            <br>
+
+            <label for="totalPrice">Total Price:</label>
+            <input type="text" id="totalPrice" name="totalPrice" readonly>
+
+            <br />
+
+            <br />
+            <input type="submit" value="Generate Good Receipt Note">
+            <!-- Add a button for generating the invoice -->
+            <button id="generateInvoiceButton" style="display: none;">Generate Invoice</button>
+
+        </form>
+    </div>
+
+
+    <br />
+    <h1>Active Sales Orders</h1>
+    <table id="purchaseOrderTable">
+        <thead>
+            <tr>
+                <th>Supplier Qoutation ID</th>
+                <th>Req Qoutation ID</th>
+                <th>Product</th>
+                <th>Customer</th>
+                <th>Quantity Needed</th>
+                <th>Supplier Quantity</th>
+                <th>Unit Price</th>
+                <th>Total Price</th>
+                <th>Date</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var request in Model)
+            {
+                <tr>
+                    <td>@request.CustomerQoutationID</td>
+                    <td>@request.ReqQoutationID</td>
+                    <td>@request.Product</td>
+                    <td>@request.Customer</td>
+                    <td>@request.QuantityNeeded</td>
+                    <td>@request.SupplierQuantity</td>
+                    <td>@request.UnitPrice</td>
+                    <td>@request.TotalPrice</td>
+                    <td>@request.Date</td>
+                    <td>
+                        <a href="#" class="edit-icon" data-id="@request.CustomerQoutationID"><i class="fas fa-edit"></i></a>
+
+                        <a href="#" class="delete-icon" data-id="@request.CustomerQoutationID"><i class="fas fa-trash-alt"></i></a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <script>
+        $(function () {
+            var rowData;
+
+            $(".delete-icon").click(function () {
+                var customerQoutationId = $(this).data("id");
+
+                // Confirm the delete action
+                if (confirm("Are you sure you want to delete this request?")) {
+                    $.ajax({
+                        url: '@Url.Action("DeleteRequest", "Default1")',
+                        type: 'POST',
+                        data: { CustomerQoutationID: customerQoutationId },
+                        success: function (result) {
+                            location.reload();
+                        },
+                        error: function (xhr, status, error) {
+                            // Handle the error case if required
+                        }
+                    });
+                }
+            });
+
+            $(".edit-icon").click(function () {
+                // Get the row data
+                rowData = $(this).closest("tr").find("td");
+
+                // Populate the form fields with the row data
+                $("#supplierQoutationId").val(rowData.eq(0).text());
+                $("#reqQoutationId").val(rowData.eq(1).text());
+                $("#product").val(rowData.eq(2).text());
+                $("#supplier").val(rowData.eq(3).text());
+                $("#quantityNeeded").val(rowData.eq(4).text());
+                $("#supplierQuantity").val(rowData.eq(5).text());
+                $("#unitPrice").val(rowData.eq(6).text());
+                $("#datepicker").val(rowData.eq(8).text());
+                $("#totalPrice").val(rowData.eq(7).text());
+
+                // Hide the table and show the form
+                $("#purchaseOrderTable").hide();
+                $("#editForm").show();
+
+                // Hide the Generate Invoice button
+                $("#generateInvoiceButton").hide();
+            });
+
+
+            // Hide the form initially
+            $("#editForm").hide();
+
+            // Form submit event
+            $("#editForm").submit(function (event) {
+                event.preventDefault();
+
+                // Clear the table data
+                $("table tbody").empty();
+
+                // Create a new table row with the form data
+                var newRow = $("<tr>").append(
+                    $("<td>").text($("#supplierQoutationId").val()),
+                    $("<td>").text($("#reqQoutationId").val()),
+                    $("<td>").text($("#product").val()),
+                    $("<td>").text($("#supplier").val()),
+                    $("<td>").text($("#quantityNeeded").val()),
+                    $("<td>").text($("#supplierQuantity").val()),
+                    $("<td>").text($("#unitPrice").val()),
+                    $("<td>").text($("#totalPrice").val()),
+                    $("<td>").text($("#datepicker").val()),
+                    $("<td>").html('<a href="#" class="edit-icon" data-id="' + $("#reqQoutationId").val() + '"><i class="fas fa-edit"></i></a>'),
+                    $("<td>").html('<button class="invoice-button" onclick="generateInvoice(this)">Invoice</button>')
+                );
+
+                // Append the new row to the table
+                $("#purchaseOrderTable tbody").append(newRow);
+
+                // Show the table and hide the form
+                $("#purchaseOrderTable").show();
+                $("#editForm").hide();
+
+                // Show the Generate Invoice button
+                $("#generateInvoiceButton").show();
+            });
+        });
+
+        // Include the html2pdf library
+        // Modify the generateInvoice function
+
+        function generateInvoice(button) {
+            var row = $(button).closest("tr");
+
+            var supplierQoutationId = row.find("td").eq(0).text();
+            var reqQoutationId = row.find("td").eq(1).text();
+            var product = row.find("td").eq(2).text();
+            var supplier = row.find("td").eq(3).text();
+            var quantityNeeded = row.find("td").eq(4).text();
+            var supplierQuantity = row.find("td").eq(5).text();
+            var unitPrice = row.find("td").eq(6).text();
+            var totalPrice = row.find("td").eq(7).text();
+            var date = row.find("td").eq(8).text();
+
+            // Perform further processing to generate the invoice
+            // ...
+
+            // Create the HTML content for the invoice
+            var invoiceContent = `
+              <h2>Invoice</h2>
+              <p>Supplier Qoutation ID: ${supplierQoutationId}</p>
+              <p>Req Qoutation ID: ${reqQoutationId}</p>
+              <p>Product: ${product}</p>
+              <p>Supplier: ${supplier}</p>
+              <p>Quantity Needed: ${quantityNeeded}</p>
+              <p>Supplier Quantity: ${supplierQuantity}</p>
+              <p>Unit Price: ${unitPrice}</p>
+              <p>Total Price: ${totalPrice}</p>
+              <p>Date: ${date}</p>
+  `;
+
+            // Generate the PDF from the HTML content
+            html2pdf().from(invoiceContent).save("invoice.pdf");
+
+            alert("Invoice generated for Req Qoutation ID: " + reqQoutationId + "\n\nThe PDF has been generated and saved as invoice.pdf");
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,328 @@
+﻿
+@{
+    ViewBag.Title = "Sales Qoutation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Example</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <style>
+        /* CSS for alignment and styling */
+        label {
+            display: inline-block;
+            width: 160px;
+        }
+
+        select, input[type="number"], input[type="text"] {
+            width: 70%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+
+        input[type="submit"], input[type="button"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 40%;
+            margin-left: 26%;
+            margin-top: 20px;
+        }
+
+        h1 {
+            margin-top: 5%;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 3%;
+            margin-bottom: 10%;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tbody tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#datepicker").datepicker();
+        });
+
+        function editRequest(reqQoutationId, productName, supplierName, quantity, productDate) {
+            $("#purchase-order-id").val(reqQoutationId);
+            $("#product").val(productName);
+            $("#supplier").val(supplierName);
+            $("#quantity").val(quantity);
+            $("#quantity2").val('');
+            $("#price-per-unit").val('');
+            $("#datepicker").val(productDate);
+
+            // Show the "Update" button and hide the "Request" button
+            $("#update-button").show();
+            $("input[type='submit']").hide();
+        }
+    </script>
+</head>
+<body>
+    <div id="supForm" style="display:none">
+        @using (Html.BeginForm("SubmitRequest", "CustomerQouat", FormMethod.Post))
+        {
+            <input type="hidden" id="ReqQuoteID" value="">
+            <label for="datepicker">Date To Deliver:</label>
+            <input type="text" id="datepicker" name="datepicker" readonly>
+            <br>
+
+            <label for="purchase-order-id">Purchase Order Req ID:</label>
+            <input type="text" id="purchase-order-id" name="purchaseorderid" readonly>
+            <br>
+
+            <input type="hidden" id="suppID" value="">
+            <label for="supplier">Customer:</label>
+            <input type="text" id="supplier" name="supplier" readonly>
+            <br>
+
+            <label for="paymentTerm">Payment Term:</label>
+<input type="number" id="paymentTerm" name="paymentterm" min="1" required>
+<br>
+
+
+            <table id="productList">
+    <tr>
+        <th>Product ID</th>
+        <th>Product Name</th>
+        <th>QTY Needed</th>
+        <th>QTY Have</th>
+        <th>Price per Unit</th>
+        <th>Tax</th>
+    </tr>
+</table>
+
+
+
+
+
+            <input type="button" value="Submit" onclick="submitReq()">
+            <input type="button" value="New Request" onclick="newReq()">
+
+        }
+    </div>
+    <div id="listForm" style="display:block">
+        <h1 style="text-align:center;">Select Sales Order Requests</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Serial No</th>
+
+                    <th>Customer</th>
+
+                    <th>Product Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var request in Model)
+                {
+                    var product = (ViewBag.Products as List<IMS_Project.Models.Product>).FirstOrDefault(p => p.ProductID == request.Product);
+                    var supplier = (ViewBag.Customers as List<IMS_Project.Models.Customer>).FirstOrDefault(s => s.CustomerID == request.Customer);
+
+                    var productName = product != null ? product.Name : string.Empty;
+                    var supplierName = supplier != null ? supplier.First_Name : string.Empty;
+
+                    <tr>
+                        <td>@request.ReqQoutationID</td>
+
+                        <td>@supplierName</td>
+
+                        <td>@request.ProductDate</td>
+                        <td>
+                            <a href="#" class="update-icon" onclick="editRequest2('@request.ReqQoutationID', '@productName', '@supplierName', '@request.Quantity', '@request.ProductDate')"><i class="fas fa-edit"></i></a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+    <script>
+    $(function () {
+        $("input[type='submit']").click(function (e) {
+            e.preventDefault(); // Prevent the form from being submitted
+
+            var supplier = $("#supplier").val();
+            var quantity2 = $("#quantity2").val();
+            var pricePerUnit = $("#price-per-unit").val();
+            var datepicker = $("#datepicker").val();
+
+            if (supplier === "" || quantity2 === "" || pricePerUnit === "" || datepicker === "") {
+                alert("Please fill in all the fields before submitting the form.");
+            } else {
+                // Submit the form
+                $(this).closest("form").submit();
+            }
+        });
+    });
+    let totalIndex = 0;
+    function editRequest2(reqQoutationId, productName, supplierName, quantity, productDate) {
+        $.ajax({
+            url: '@Url.Action("getQuoteReqData", "CustomerQouat")',
+                type: 'POST',
+                data: {
+                    reqQoutationId: reqQoutationId,
+                },
+                success: function (result) {
+                    document.getElementById("supForm").style.display = "block";
+                    document.getElementById("listForm").style.display = "none";
+                    console.log(result);
+                    document.getElementById("datepicker").value = result[0].ProductDate.split(" ")[0];
+                    document.getElementById("purchase-order-id").value = result[0].newSupplieID;
+                    document.getElementById("ReqQuoteID").value = result[0].ReqQoutationID;
+                    document.getElementById("suppID").value = result[0].Supplier;
+                    document.getElementById("supplier").value = result[0].suppName;
+
+                    let oldTable = document.getElementById("productList").innerHTML;
+
+                    result[0].items.forEach((e, index) => {
+                        console.log(e);
+                    oldTable += "<tr><td id='reqID" + index + "'>" + e.productID + "</td>";
+                    oldTable += "<td>" + e.productName + "</td>";
+                    oldTable += "<td>" + e.qty + "</td>";
+                    oldTable += "<td><input type='text' id='qtyHave" + index + "'</td>";
+                    oldTable += "<td><input type='text' id='priceUnit" + index + "'</td>";
+                    oldTable += "<td><input type='text' id='tax" + index + "'</td></tr>"; // New column
+                })
+
+            totalIndex = result[0].items.length;
+            document.getElementById("productList").innerHTML = oldTable;
+            //location.reload(); // Reload the page to reflect the updated data
+        },
+        error: function (xhr, status, error) {
+            console.log("xhr:" + xhr);
+            console.log("status:" + error);
+            console.log("error:" + error);
+            // Handle the error case if required
+        }
+        });
+        };
+
+        function newReq() {
+            location.reload();
+        }
+
+        function submitReq() {
+    let qtyValid = 1;
+    let priceUnit = 1;
+    let taxValid = 1; // New variable for tax validation
+    let data = "{";
+    if (totalIndex > 0) {
+        for (let i = 0; i < totalIndex; i++) {
+            data += i + ":{";
+            data += "\"proId\": \"" + document.getElementById('reqID' + i).innerHTML + "\", ";
+            let qty = document.getElementById('qtyHave' + i).value;
+            let price = document.getElementById('priceUnit' + i).value;
+            let tax = document.getElementById('tax' + i).value; // Get the tax value
+            let paymentTerm = $("#paymentTerm").val();
+
+
+            if (qty.trim().length > 0) {
+                qty = parseFloat(qty);
+                if (qty < 0) {
+                    qtyValid = 0;
+                    console.log("qty is less than 0");
+                }
+            } else {
+                qtyValid = 0;
+                console.log("qty is blank =" + i);
+            }
+
+            if (price.trim().length > 0) {
+                price = parseFloat(price);
+                if (price <= 0 || isNaN(price)) {
+                    priceUnit = 0;
+                    console.log("price is not a valid number or is less than or equal to 0");
+                }
+            } else {
+                priceUnit = 0;
+                console.log("price is blank =" + i);
+            }
+
+            if (tax.trim().length > 0) {
+                tax = parseFloat(tax);
+                if (tax <= 0 || isNaN(tax)) {
+                    taxValid = 0;
+                    console.log("tax is not a valid number or is less than or equal to 0");
+                }
+            } else {
+                taxValid = 0;
+                console.log("tax is blank =" + i);
+            }
+
+            data += "\"qtyHave\": \"" + document.getElementById('qtyHave' + i).value + "\", ";
+            data += "\"priceUnit\": \"" + document.getElementById('priceUnit' + i).value + "\", ";
+            data += "\"tax\": \"" + tax + "\""; // Include tax value in the data
+            data += "}";
+            if (i != (totalIndex - 1)) {
+                data += ", ";
+            }
+        }
+    }
+
+    let reqID = document.getElementById("ReqQuoteID").value;
+    let suppID = document.getElementById("suppID").value;
+    data += "}";
+    console.log(data);
+    if (qtyValid && priceUnit && taxValid) {
+        $.ajax({
+            url: '@Url.Action("submitSupplierQuote", "CustomerQouat")',
+            type: 'POST',
+            data: {
+                reqID: reqID,
+                data: data,
+                suppID: suppID,
+                paymentTerm: $("#paymentTerm").val() // Pass the payment term value
+            },
+            success: function (result) {
+                console.log(result);
+                location.reload(); // Reload the page to reflect the updated data
+            },
+            error: function (xhr, status, error) {
+                console.log("xhr:" + xhr);
+                console.log("status:" + error);
+                console.log("error:" + error);
+                // Handle the error case if required
+            }
+        });
+    } else {
+        if (!qtyValid) {
+            alert("Not Valid QTY or Tax");
+        } else if (!priceUnit) {
+            alert("Unit Price is not valid");
+        } else if (!taxValid) {
+            alert("Tax is not valid");
+        }
+    }
+}
+
+    </script>
+</body>
+</html>
+
+

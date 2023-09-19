@@ -1,0 +1,344 @@
+C:\Users\Zulfiqar Akram\Documents\Visual Studio 2013\Projects\IMS-Project\IMS-Project\bin\IMS-Project.dll.config
+C:\Users\Zulfiqar Akram\Documents\Visual Studio 2013\Projects\IMS-Project\IMS-Project\bin\IMS-Project.dll
+C:\Users\Zulfiqar Akram\Documents\Visual Studio 2013\Projects\IMS-Project\IMS-Project\bin\IMS-Project.pdb
+C:\Users\Zulfiqar Akram\Documents\Visual Studio 2013\Projects\IMS-Project\IMS-Project\bin\Antlr3.Runtime.dll
+C:\Users\Zulfiqar Akram\Documents\Visual Studio 2013\Projects\IMS-Project\IMS-Project\bin\EntityFramework.dll
+C:\Users\Zulfiqar Akram\Documents\Visual Studio 2013\Projects\IMS-Project\IMS-Project\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Zulfiqar Akram\Documents\Visual Studio 2013\Projects\IMS-Project\IMS-Project\bin\Newtonsoft.Json.dll
+C:\Users\Zulfiqar Akram\Documents\Visual Studio 2013\Projects\IMS-Project\IMS-Project\bin\System.Web.Helpers.dll
+C:\Users\Zulfiqar Akram\Documents\Visual Studio 2013\Projects\IMS-Project\IMS-Project\bin\System.Web.Mvc.dll
+C:\Users\Zulfiqar Akram\Documents\Visual Studio 2013\Projects\IMS-Project\IMS-Project\bin\System.Web.Optimization.dll
+C:\Users\Zulfiqar Akram\Documents\Visual Studio 2013\Projects\IMS-Project\IMS-Project\bin\System.Web.Razor.dll
+C:\Users\Zulfiqar Akram\Documents\Visual Studio 2013\Projects\IMS-Project\IMS-Project\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Zulfiqar Akram\Documents\Visual Studio 2013\Projects\IMS-Project\IMS-Project\bin\System.Web.WebPages.dll
+C:\Users\Zulfiqar Akram\Documents\Visual Studio 2013\Projects\IMS-Project\IMS-Project\bin\System.Web.WebPages.Razor.dll
+C:\Users\Zulfiqar Akram\Documents\Visual Studio 2013\Projects\IMS-Project\IMS-Project\bin\WebGrease.dll
+C:\Users\Zulfiqar Akram\Documents\Visual Studio 2013\Projects\IMS-Project\IMS-Project\bin\EntityFramework.xml
+C:\Users\Zulfiqar Akram\Documents\Visual Studio 2013\Projects\IMS-Project\IMS-Project\bin\System.Web.Helpers.xml
+C:\Users\Zulfiqar Akram\Documents\Visual Studio 2013\Projects\IMS-Project\IMS-Project\bin\System.Web.Mvc.xml
+C:\Users\Zulfiqar Akram\Documents\Visual Studio 2013\Projects\IMS-Project\IMS-Project\bin\System.Web.Optimization.xml
+C:\Users\Zulfiqar Akram\Documents\Visual Studio 2013\Projects\IMS-Project\IMS-Project\bin\System.Web.Razor.xml
+C:\Users\Zulfiqar Akram\Documents\Visual Studio 2013\Projects\IMS-Project\IMS-Project\bin\System.Web.WebPages.xml
+C:\Users\Zulfiqar Akram\Documents\Visual Studio 2013\Projects\IMS-Project\IMS-Project\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Zulfiqar Akram\Documents\Visual Studio 2013\Projects\IMS-Project\IMS-Project\bin\System.Web.WebPages.Razor.xml
+C:\Users\Zulfiqar Akram\Documents\Visual Studio 2013\Projects\IMS-Project\IMS-Project\bin\Antlr3.Runtime.pdb
+C:\Users\Zulfiqar Akram\Documents\Visual Studio 2013\Projects\IMS-Project\IMS-Project\bin\Newtonsoft.Json.xml
+C:\Users\Zulfiqar Akram\Documents\Visual Studio 2013\Projects\IMS-Project\IMS-Project\obj\Debug\IMS-Project.dll
+C:\Users\Zulfiqar Akram\Documents\Visual Studio 2013\Projects\IMS-Project\IMS-Project\obj\Debug\IMS-Project.pdb
+C:\Users\Zulfiqar Akram\Documents\Visual Studio 2013\Projects\IMS-Project\IMS-Project\obj\Debug\IMS-Project.csprojResolveAssemblyReference.cache
+C:\Users\Dw\Desktop\PP\E-Commerce-Website-master\Admin Side\IMS-Project\IMS-Project\bin\IMS-Project.dll.config
+C:\Users\Dw\Desktop\PP\E-Commerce-Website-master\Admin Side\IMS-Project\IMS-Project\bin\IMS-Project.dll
+C:\Users\Dw\Desktop\PP\E-Commerce-Website-master\Admin Side\IMS-Project\IMS-Project\bin\IMS-Project.pdb
+C:\Users\Dw\Desktop\PP\E-Commerce-Website-master\Admin Side\IMS-Project\IMS-Project\bin\Antlr3.Runtime.dll
+C:\Users\Dw\Desktop\PP\E-Commerce-Website-master\Admin Side\IMS-Project\IMS-Project\bin\EntityFramework.dll
+C:\Users\Dw\Desktop\PP\E-Commerce-Website-master\Admin Side\IMS-Project\IMS-Project\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Dw\Desktop\PP\E-Commerce-Website-master\Admin Side\IMS-Project\IMS-Project\bin\Newtonsoft.Json.dll
+C:\Users\Dw\Desktop\PP\E-Commerce-Website-master\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Helpers.dll
+C:\Users\Dw\Desktop\PP\E-Commerce-Website-master\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Mvc.dll
+C:\Users\Dw\Desktop\PP\E-Commerce-Website-master\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Optimization.dll
+C:\Users\Dw\Desktop\PP\E-Commerce-Website-master\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Razor.dll
+C:\Users\Dw\Desktop\PP\E-Commerce-Website-master\Admin Side\IMS-Project\IMS-Project\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Dw\Desktop\PP\E-Commerce-Website-master\Admin Side\IMS-Project\IMS-Project\bin\System.Web.WebPages.dll
+C:\Users\Dw\Desktop\PP\E-Commerce-Website-master\Admin Side\IMS-Project\IMS-Project\bin\System.Web.WebPages.Razor.dll
+C:\Users\Dw\Desktop\PP\E-Commerce-Website-master\Admin Side\IMS-Project\IMS-Project\bin\WebGrease.dll
+C:\Users\Dw\Desktop\PP\E-Commerce-Website-master\Admin Side\IMS-Project\IMS-Project\bin\EntityFramework.xml
+C:\Users\Dw\Desktop\PP\E-Commerce-Website-master\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Helpers.xml
+C:\Users\Dw\Desktop\PP\E-Commerce-Website-master\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Mvc.xml
+C:\Users\Dw\Desktop\PP\E-Commerce-Website-master\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Optimization.xml
+C:\Users\Dw\Desktop\PP\E-Commerce-Website-master\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Razor.xml
+C:\Users\Dw\Desktop\PP\E-Commerce-Website-master\Admin Side\IMS-Project\IMS-Project\bin\System.Web.WebPages.xml
+C:\Users\Dw\Desktop\PP\E-Commerce-Website-master\Admin Side\IMS-Project\IMS-Project\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Dw\Desktop\PP\E-Commerce-Website-master\Admin Side\IMS-Project\IMS-Project\bin\System.Web.WebPages.Razor.xml
+C:\Users\Dw\Desktop\PP\E-Commerce-Website-master\Admin Side\IMS-Project\IMS-Project\bin\Antlr3.Runtime.pdb
+C:\Users\Dw\Desktop\PP\E-Commerce-Website-master\Admin Side\IMS-Project\IMS-Project\bin\Newtonsoft.Json.xml
+C:\Users\Dw\Desktop\PP\E-Commerce-Website-master\Admin Side\IMS-Project\IMS-Project\obj\Debug\IMS-Project.dll
+C:\Users\Dw\Desktop\PP\E-Commerce-Website-master\Admin Side\IMS-Project\IMS-Project\obj\Debug\IMS-Project.pdb
+C:\Users\Dw\Desktop\PP\E-Commerce-Website-master\Admin Side\IMS-Project\IMS-Project\bin\BouncyCastle.Crypto.dll
+C:\Users\Dw\Desktop\PP\E-Commerce-Website-master\Admin Side\IMS-Project\IMS-Project\bin\itextsharp.dll
+C:\Users\Dw\Desktop\PP\E-Commerce-Website-master\Admin Side\IMS-Project\IMS-Project\bin\itextsharp.xml
+C:\Users\Dw\Desktop\PP\E-Commerce-Website-master\Admin Side\IMS-Project\IMS-Project\obj\Debug\IMS-Project.csprojResolveAssemblyReference.cache
+C:\Users\Dw\Desktop\PP\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\IMS-Project.dll.config
+C:\Users\Dw\Desktop\PP\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\IMS-Project.dll
+C:\Users\Dw\Desktop\PP\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\IMS-Project.pdb
+C:\Users\Dw\Desktop\PP\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\Antlr3.Runtime.dll
+C:\Users\Dw\Desktop\PP\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\BouncyCastle.Crypto.dll
+C:\Users\Dw\Desktop\PP\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\EntityFramework.dll
+C:\Users\Dw\Desktop\PP\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\itextsharp.dll
+C:\Users\Dw\Desktop\PP\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Dw\Desktop\PP\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\Newtonsoft.Json.dll
+C:\Users\Dw\Desktop\PP\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Helpers.dll
+C:\Users\Dw\Desktop\PP\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Mvc.dll
+C:\Users\Dw\Desktop\PP\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Optimization.dll
+C:\Users\Dw\Desktop\PP\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Razor.dll
+C:\Users\Dw\Desktop\PP\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Dw\Desktop\PP\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\System.Web.WebPages.dll
+C:\Users\Dw\Desktop\PP\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\System.Web.WebPages.Razor.dll
+C:\Users\Dw\Desktop\PP\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\WebGrease.dll
+C:\Users\Dw\Desktop\PP\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\EntityFramework.xml
+C:\Users\Dw\Desktop\PP\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\itextsharp.xml
+C:\Users\Dw\Desktop\PP\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Helpers.xml
+C:\Users\Dw\Desktop\PP\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Mvc.xml
+C:\Users\Dw\Desktop\PP\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Optimization.xml
+C:\Users\Dw\Desktop\PP\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Razor.xml
+C:\Users\Dw\Desktop\PP\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\System.Web.WebPages.xml
+C:\Users\Dw\Desktop\PP\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Dw\Desktop\PP\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\System.Web.WebPages.Razor.xml
+C:\Users\Dw\Desktop\PP\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\Antlr3.Runtime.pdb
+C:\Users\Dw\Desktop\PP\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\Newtonsoft.Json.xml
+C:\Users\Dw\Desktop\PP\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\obj\Debug\IMS-Project.csprojResolveAssemblyReference.cache
+C:\Users\Dw\Desktop\PP\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\obj\Debug\IMS-Project.dll
+C:\Users\Dw\Desktop\PP\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\obj\Debug\IMS-Project.pdb
+C:\Users\Dw\Desktop\mk\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\IMS-Project.dll.config
+C:\Users\Dw\Desktop\mk\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\IMS-Project.dll
+C:\Users\Dw\Desktop\mk\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\IMS-Project.pdb
+C:\Users\Dw\Desktop\mk\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\Antlr3.Runtime.dll
+C:\Users\Dw\Desktop\mk\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\BouncyCastle.Crypto.dll
+C:\Users\Dw\Desktop\mk\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\EntityFramework.dll
+C:\Users\Dw\Desktop\mk\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\itextsharp.dll
+C:\Users\Dw\Desktop\mk\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Dw\Desktop\mk\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\Newtonsoft.Json.dll
+C:\Users\Dw\Desktop\mk\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Helpers.dll
+C:\Users\Dw\Desktop\mk\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Mvc.dll
+C:\Users\Dw\Desktop\mk\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Optimization.dll
+C:\Users\Dw\Desktop\mk\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Razor.dll
+C:\Users\Dw\Desktop\mk\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Dw\Desktop\mk\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\System.Web.WebPages.dll
+C:\Users\Dw\Desktop\mk\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\System.Web.WebPages.Razor.dll
+C:\Users\Dw\Desktop\mk\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\WebGrease.dll
+C:\Users\Dw\Desktop\mk\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\EntityFramework.xml
+C:\Users\Dw\Desktop\mk\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\itextsharp.xml
+C:\Users\Dw\Desktop\mk\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Helpers.xml
+C:\Users\Dw\Desktop\mk\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Mvc.xml
+C:\Users\Dw\Desktop\mk\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Optimization.xml
+C:\Users\Dw\Desktop\mk\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Razor.xml
+C:\Users\Dw\Desktop\mk\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\System.Web.WebPages.xml
+C:\Users\Dw\Desktop\mk\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Dw\Desktop\mk\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\System.Web.WebPages.Razor.xml
+C:\Users\Dw\Desktop\mk\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\Antlr3.Runtime.pdb
+C:\Users\Dw\Desktop\mk\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\Newtonsoft.Json.xml
+C:\Users\Dw\Desktop\mk\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\obj\Debug\IMS-Project.dll
+C:\Users\Dw\Desktop\mk\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\obj\Debug\IMS-Project.pdb
+C:\Users\Dw\Desktop\mk\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\obj\Debug\IMS-Project.csprojResolveAssemblyReference.cache
+C:\Users\Hafiz\Downloads\Project (1)\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\IMS-Project.dll.config
+C:\Users\Hafiz\Downloads\Project (1)\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\IMS-Project.dll
+C:\Users\Hafiz\Downloads\Project (1)\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\IMS-Project.pdb
+C:\Users\Hafiz\Downloads\Project (1)\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\Antlr3.Runtime.dll
+C:\Users\Hafiz\Downloads\Project (1)\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\BouncyCastle.Crypto.dll
+C:\Users\Hafiz\Downloads\Project (1)\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\EntityFramework.dll
+C:\Users\Hafiz\Downloads\Project (1)\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\itextsharp.dll
+C:\Users\Hafiz\Downloads\Project (1)\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Hafiz\Downloads\Project (1)\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\Newtonsoft.Json.dll
+C:\Users\Hafiz\Downloads\Project (1)\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Helpers.dll
+C:\Users\Hafiz\Downloads\Project (1)\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Mvc.dll
+C:\Users\Hafiz\Downloads\Project (1)\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Optimization.dll
+C:\Users\Hafiz\Downloads\Project (1)\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Razor.dll
+C:\Users\Hafiz\Downloads\Project (1)\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Hafiz\Downloads\Project (1)\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.WebPages.dll
+C:\Users\Hafiz\Downloads\Project (1)\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.WebPages.Razor.dll
+C:\Users\Hafiz\Downloads\Project (1)\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\WebGrease.dll
+C:\Users\Hafiz\Downloads\Project (1)\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\EntityFramework.xml
+C:\Users\Hafiz\Downloads\Project (1)\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\itextsharp.xml
+C:\Users\Hafiz\Downloads\Project (1)\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Helpers.xml
+C:\Users\Hafiz\Downloads\Project (1)\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Mvc.xml
+C:\Users\Hafiz\Downloads\Project (1)\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Optimization.xml
+C:\Users\Hafiz\Downloads\Project (1)\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Razor.xml
+C:\Users\Hafiz\Downloads\Project (1)\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.WebPages.xml
+C:\Users\Hafiz\Downloads\Project (1)\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Hafiz\Downloads\Project (1)\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.WebPages.Razor.xml
+C:\Users\Hafiz\Downloads\Project (1)\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\Antlr3.Runtime.pdb
+C:\Users\Hafiz\Downloads\Project (1)\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\Newtonsoft.Json.xml
+C:\Users\Hafiz\Downloads\Project (1)\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\obj\Debug\IMS-Project.csproj.AssemblyReference.cache
+C:\Users\Hafiz\Downloads\Project (1)\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\obj\Debug\IMS-Project.csproj.CoreCompileInputs.cache
+C:\Users\Hafiz\Downloads\Project (1)\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\obj\Debug\IMS-Project.csproj.CopyComplete
+C:\Users\Hafiz\Downloads\Project (1)\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\obj\Debug\IMS-Project.dll
+C:\Users\Hafiz\Downloads\Project (1)\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\obj\Debug\IMS-Project.pdb
+C:\Users\Dw\Desktop\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\IMS-Project.dll.config
+C:\Users\Dw\Desktop\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\IMS-Project.dll
+C:\Users\Dw\Desktop\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\IMS-Project.pdb
+C:\Users\Dw\Desktop\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\Antlr3.Runtime.dll
+C:\Users\Dw\Desktop\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\BouncyCastle.Crypto.dll
+C:\Users\Dw\Desktop\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\EntityFramework.dll
+C:\Users\Dw\Desktop\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\itextsharp.dll
+C:\Users\Dw\Desktop\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Dw\Desktop\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\Newtonsoft.Json.dll
+C:\Users\Dw\Desktop\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Helpers.dll
+C:\Users\Dw\Desktop\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Mvc.dll
+C:\Users\Dw\Desktop\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Optimization.dll
+C:\Users\Dw\Desktop\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Razor.dll
+C:\Users\Dw\Desktop\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Dw\Desktop\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.WebPages.dll
+C:\Users\Dw\Desktop\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.WebPages.Razor.dll
+C:\Users\Dw\Desktop\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\WebGrease.dll
+C:\Users\Dw\Desktop\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\EntityFramework.xml
+C:\Users\Dw\Desktop\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\itextsharp.xml
+C:\Users\Dw\Desktop\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Helpers.xml
+C:\Users\Dw\Desktop\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Mvc.xml
+C:\Users\Dw\Desktop\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Optimization.xml
+C:\Users\Dw\Desktop\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Razor.xml
+C:\Users\Dw\Desktop\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.WebPages.xml
+C:\Users\Dw\Desktop\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Dw\Desktop\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.WebPages.Razor.xml
+C:\Users\Dw\Desktop\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\Antlr3.Runtime.pdb
+C:\Users\Dw\Desktop\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\Newtonsoft.Json.xml
+C:\Users\Dw\Desktop\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\obj\Debug\IMS-Project.dll
+C:\Users\Dw\Desktop\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\obj\Debug\IMS-Project.pdb
+C:\Users\Dw\Desktop\Project\Admin Side\Admin Side\IMS-Project\IMS-Project\obj\Debug\IMS-Project.csprojResolveAssemblyReference.cache
+C:\Users\hp\OneDrive\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\IMS-Project.dll.config
+C:\Users\hp\OneDrive\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\IMS-Project.dll
+C:\Users\hp\OneDrive\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\IMS-Project.pdb
+C:\Users\hp\OneDrive\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\Antlr3.Runtime.dll
+C:\Users\hp\OneDrive\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\BouncyCastle.Crypto.dll
+C:\Users\hp\OneDrive\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\EntityFramework.dll
+C:\Users\hp\OneDrive\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\itextsharp.dll
+C:\Users\hp\OneDrive\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\hp\OneDrive\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\Newtonsoft.Json.dll
+C:\Users\hp\OneDrive\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Helpers.dll
+C:\Users\hp\OneDrive\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Mvc.dll
+C:\Users\hp\OneDrive\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Optimization.dll
+C:\Users\hp\OneDrive\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Razor.dll
+C:\Users\hp\OneDrive\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.WebPages.Deployment.dll
+C:\Users\hp\OneDrive\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.WebPages.dll
+C:\Users\hp\OneDrive\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.WebPages.Razor.dll
+C:\Users\hp\OneDrive\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\WebGrease.dll
+C:\Users\hp\OneDrive\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\EntityFramework.xml
+C:\Users\hp\OneDrive\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\itextsharp.xml
+C:\Users\hp\OneDrive\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Helpers.xml
+C:\Users\hp\OneDrive\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Mvc.xml
+C:\Users\hp\OneDrive\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Optimization.xml
+C:\Users\hp\OneDrive\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Razor.xml
+C:\Users\hp\OneDrive\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.WebPages.xml
+C:\Users\hp\OneDrive\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.WebPages.Deployment.xml
+C:\Users\hp\OneDrive\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.WebPages.Razor.xml
+C:\Users\hp\OneDrive\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\Antlr3.Runtime.pdb
+C:\Users\hp\OneDrive\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\Newtonsoft.Json.xml
+C:\Users\hp\OneDrive\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\obj\Debug\IMS-Project.csproj.AssemblyReference.cache
+C:\Users\hp\OneDrive\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\obj\Debug\IMS-Project.csproj.CoreCompileInputs.cache
+C:\Users\hp\OneDrive\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\obj\Debug\IMS-Project.csproj.CopyComplete
+C:\Users\hp\OneDrive\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\obj\Debug\IMS-Project.dll
+C:\Users\hp\OneDrive\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\obj\Debug\IMS-Project.pdb
+C:\Users\hp\OneDrive\Desktop\FYP FINAL PROJECT\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\IMS-Project.dll.config
+C:\Users\hp\OneDrive\Desktop\FYP FINAL PROJECT\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\IMS-Project.dll
+C:\Users\hp\OneDrive\Desktop\FYP FINAL PROJECT\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\IMS-Project.pdb
+C:\Users\hp\OneDrive\Desktop\FYP FINAL PROJECT\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\Antlr3.Runtime.dll
+C:\Users\hp\OneDrive\Desktop\FYP FINAL PROJECT\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\BouncyCastle.Crypto.dll
+C:\Users\hp\OneDrive\Desktop\FYP FINAL PROJECT\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\EntityFramework.dll
+C:\Users\hp\OneDrive\Desktop\FYP FINAL PROJECT\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\itextsharp.dll
+C:\Users\hp\OneDrive\Desktop\FYP FINAL PROJECT\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\hp\OneDrive\Desktop\FYP FINAL PROJECT\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\Newtonsoft.Json.dll
+C:\Users\hp\OneDrive\Desktop\FYP FINAL PROJECT\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Helpers.dll
+C:\Users\hp\OneDrive\Desktop\FYP FINAL PROJECT\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Mvc.dll
+C:\Users\hp\OneDrive\Desktop\FYP FINAL PROJECT\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Optimization.dll
+C:\Users\hp\OneDrive\Desktop\FYP FINAL PROJECT\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Razor.dll
+C:\Users\hp\OneDrive\Desktop\FYP FINAL PROJECT\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.WebPages.Deployment.dll
+C:\Users\hp\OneDrive\Desktop\FYP FINAL PROJECT\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.WebPages.dll
+C:\Users\hp\OneDrive\Desktop\FYP FINAL PROJECT\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.WebPages.Razor.dll
+C:\Users\hp\OneDrive\Desktop\FYP FINAL PROJECT\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\WebGrease.dll
+C:\Users\hp\OneDrive\Desktop\FYP FINAL PROJECT\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\EntityFramework.xml
+C:\Users\hp\OneDrive\Desktop\FYP FINAL PROJECT\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\itextsharp.xml
+C:\Users\hp\OneDrive\Desktop\FYP FINAL PROJECT\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Helpers.xml
+C:\Users\hp\OneDrive\Desktop\FYP FINAL PROJECT\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Mvc.xml
+C:\Users\hp\OneDrive\Desktop\FYP FINAL PROJECT\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Optimization.xml
+C:\Users\hp\OneDrive\Desktop\FYP FINAL PROJECT\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Razor.xml
+C:\Users\hp\OneDrive\Desktop\FYP FINAL PROJECT\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.WebPages.xml
+C:\Users\hp\OneDrive\Desktop\FYP FINAL PROJECT\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.WebPages.Deployment.xml
+C:\Users\hp\OneDrive\Desktop\FYP FINAL PROJECT\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.WebPages.Razor.xml
+C:\Users\hp\OneDrive\Desktop\FYP FINAL PROJECT\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\Antlr3.Runtime.pdb
+C:\Users\hp\OneDrive\Desktop\FYP FINAL PROJECT\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\Newtonsoft.Json.xml
+C:\Users\hp\OneDrive\Desktop\FYP FINAL PROJECT\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\obj\Debug\IMS-Project.csproj.AssemblyReference.cache
+C:\Users\hp\OneDrive\Desktop\FYP FINAL PROJECT\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\obj\Debug\IMS-Project.csproj.CoreCompileInputs.cache
+C:\Users\hp\OneDrive\Desktop\FYP FINAL PROJECT\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\obj\Debug\IMS-Project.csproj.CopyComplete
+C:\Users\hp\OneDrive\Desktop\FYP FINAL PROJECT\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\obj\Debug\IMS-Project.dll
+C:\Users\hp\OneDrive\Desktop\FYP FINAL PROJECT\Project\E-Commerce-Website\Admin Side\Admin Side\IMS-Project\IMS-Project\obj\Debug\IMS-Project.pdb
+C:\Users\Dw\Desktop\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\IMS-Project.dll.config
+C:\Users\Dw\Desktop\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\IMS-Project.dll
+C:\Users\Dw\Desktop\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\IMS-Project.pdb
+C:\Users\Dw\Desktop\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\Antlr3.Runtime.dll
+C:\Users\Dw\Desktop\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\BouncyCastle.Crypto.dll
+C:\Users\Dw\Desktop\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\EntityFramework.dll
+C:\Users\Dw\Desktop\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\itextsharp.dll
+C:\Users\Dw\Desktop\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Dw\Desktop\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\Newtonsoft.Json.dll
+C:\Users\Dw\Desktop\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Helpers.dll
+C:\Users\Dw\Desktop\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Mvc.dll
+C:\Users\Dw\Desktop\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Optimization.dll
+C:\Users\Dw\Desktop\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Razor.dll
+C:\Users\Dw\Desktop\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Dw\Desktop\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.WebPages.dll
+C:\Users\Dw\Desktop\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.WebPages.Razor.dll
+C:\Users\Dw\Desktop\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\WebGrease.dll
+C:\Users\Dw\Desktop\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\EntityFramework.xml
+C:\Users\Dw\Desktop\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\itextsharp.xml
+C:\Users\Dw\Desktop\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Helpers.xml
+C:\Users\Dw\Desktop\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Mvc.xml
+C:\Users\Dw\Desktop\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Optimization.xml
+C:\Users\Dw\Desktop\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Razor.xml
+C:\Users\Dw\Desktop\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.WebPages.xml
+C:\Users\Dw\Desktop\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Dw\Desktop\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.WebPages.Razor.xml
+C:\Users\Dw\Desktop\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\Antlr3.Runtime.pdb
+C:\Users\Dw\Desktop\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\Newtonsoft.Json.xml
+C:\Users\Dw\Desktop\Admin Side\Admin Side\IMS-Project\IMS-Project\obj\Debug\IMS-Project.dll
+C:\Users\Dw\Desktop\Admin Side\Admin Side\IMS-Project\IMS-Project\obj\Debug\IMS-Project.pdb
+C:\Users\Dw\Desktop\Admin Side\Admin Side\IMS-Project\IMS-Project\obj\Debug\IMS-Project.csprojResolveAssemblyReference.cache
+C:\Users\Dw\Desktop\MK\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\IMS-Project.dll.config
+C:\Users\Dw\Desktop\MK\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\IMS-Project.dll
+C:\Users\Dw\Desktop\MK\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\IMS-Project.pdb
+C:\Users\Dw\Desktop\MK\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\Antlr3.Runtime.dll
+C:\Users\Dw\Desktop\MK\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\BouncyCastle.Crypto.dll
+C:\Users\Dw\Desktop\MK\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\EntityFramework.dll
+C:\Users\Dw\Desktop\MK\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\itextsharp.dll
+C:\Users\Dw\Desktop\MK\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Dw\Desktop\MK\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\Newtonsoft.Json.dll
+C:\Users\Dw\Desktop\MK\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Helpers.dll
+C:\Users\Dw\Desktop\MK\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Mvc.dll
+C:\Users\Dw\Desktop\MK\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Optimization.dll
+C:\Users\Dw\Desktop\MK\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Razor.dll
+C:\Users\Dw\Desktop\MK\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Dw\Desktop\MK\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.WebPages.dll
+C:\Users\Dw\Desktop\MK\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.WebPages.Razor.dll
+C:\Users\Dw\Desktop\MK\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\WebGrease.dll
+C:\Users\Dw\Desktop\MK\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\EntityFramework.xml
+C:\Users\Dw\Desktop\MK\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\itextsharp.xml
+C:\Users\Dw\Desktop\MK\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Helpers.xml
+C:\Users\Dw\Desktop\MK\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Mvc.xml
+C:\Users\Dw\Desktop\MK\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Optimization.xml
+C:\Users\Dw\Desktop\MK\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Razor.xml
+C:\Users\Dw\Desktop\MK\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.WebPages.xml
+C:\Users\Dw\Desktop\MK\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Dw\Desktop\MK\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\System.Web.WebPages.Razor.xml
+C:\Users\Dw\Desktop\MK\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\Antlr3.Runtime.pdb
+C:\Users\Dw\Desktop\MK\Admin Side\Admin Side\IMS-Project\IMS-Project\bin\Newtonsoft.Json.xml
+C:\Users\Dw\Desktop\MK\Admin Side\Admin Side\IMS-Project\IMS-Project\obj\Debug\IMS-Project.csprojResolveAssemblyReference.cache
+C:\Users\Dw\Desktop\MK\Admin Side\Admin Side\IMS-Project\IMS-Project\obj\Debug\IMS-Project.dll
+C:\Users\Dw\Desktop\MK\Admin Side\Admin Side\IMS-Project\IMS-Project\obj\Debug\IMS-Project.pdb
+C:\Users\Dw\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\IMS-Project.dll.config
+C:\Users\Dw\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\IMS-Project.dll
+C:\Users\Dw\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\IMS-Project.pdb
+C:\Users\Dw\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\Antlr3.Runtime.dll
+C:\Users\Dw\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\BouncyCastle.Crypto.dll
+C:\Users\Dw\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\EntityFramework.dll
+C:\Users\Dw\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\itextsharp.dll
+C:\Users\Dw\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Dw\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\Newtonsoft.Json.dll
+C:\Users\Dw\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Helpers.dll
+C:\Users\Dw\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Mvc.dll
+C:\Users\Dw\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Optimization.dll
+C:\Users\Dw\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Razor.dll
+C:\Users\Dw\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Dw\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\System.Web.WebPages.dll
+C:\Users\Dw\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\System.Web.WebPages.Razor.dll
+C:\Users\Dw\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\WebGrease.dll
+C:\Users\Dw\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\EntityFramework.xml
+C:\Users\Dw\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\itextsharp.xml
+C:\Users\Dw\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Helpers.xml
+C:\Users\Dw\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Mvc.xml
+C:\Users\Dw\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Optimization.xml
+C:\Users\Dw\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\System.Web.Razor.xml
+C:\Users\Dw\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\System.Web.WebPages.xml
+C:\Users\Dw\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Dw\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\System.Web.WebPages.Razor.xml
+C:\Users\Dw\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\Antlr3.Runtime.pdb
+C:\Users\Dw\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\bin\Newtonsoft.Json.xml
+C:\Users\Dw\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\obj\Debug\IMS-Project.csprojResolveAssemblyReference.cache
+C:\Users\Dw\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\obj\Debug\IMS-Project.dll
+C:\Users\Dw\Desktop\Ecommerce Project (By Sir Junaid)\Project\E-Commerce-Website\Admin Side\IMS-Project\IMS-Project\obj\Debug\IMS-Project.pdb

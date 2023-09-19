@@ -1,0 +1,207 @@
+﻿@model IMS_Project.Models.CustomerGoodReceiptNote
+
+@{
+    ViewBag.Title = "Delivery Note";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<style>
+    /* CSS for alignment and styling */
+    label {
+        display: inline-block;
+        width: 120px;
+    }
+
+    select, input[type="number"], input[type="text"] {
+        width: 70%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-top: 20px;
+    }
+
+    input[type="submit"], input[type="button"] {
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 40%;
+        margin-left: 26%;
+        margin-top: 20px;
+    }
+
+    h1 {
+        margin-top: 5%;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 3%;
+        margin-bottom: 10%;
+    }
+
+    th, td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    tbody tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    tbody tr:hover {
+        background-color: #ddd;
+    }
+
+    .mk {
+        background: blue;
+        border: none;
+        height: 40px;
+        width: 100px;
+        color: white;
+    }
+    .mk2 {
+        background: red;
+        border: none;
+        height: 40px;
+        width: 300px;
+        color: white;
+    }
+</style>
+@*<h4>Zabion Invoice</h4>*@
+<div id="inv">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Serial No.</th>
+                <th>Product Name</th>
+                @*<th>Customer</th>*@
+                <th>Quantity</th>
+                <th>Tax</th>
+                <th>Unit Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                var products = Model.Product.Split(',');
+                var quantities = Model.SupQuantity.Split(',');
+                var supplierId = Model.Customer;
+                var total = Model.TotalPrice;
+                var tax = Model.Tax.Split(',');
+                var PaymentTerm = Model.GoodRecieptNote;
+                var invoiceid = Model.GoodRecieptNote;
+                var ConUnit = Model.ConUnit.Split(',');
+
+                // Get the company name from the Supplier table based on the Supplier ID
+                var db = new IMS_Project.Models.KahreedoEntities(); // Replace 'YourDbContext' with your actual DbContext class
+                var supplierIdInt = int.Parse(supplierId);
+                var supplier = db.Customers.FirstOrDefault(s => s.CustomerID == supplierIdInt);
+
+                // Adjust the array lengths if necessary
+                if (products.Length > quantities.Length)
+                {
+                    Array.Resize(ref quantities, products.Length);
+                }
+                else if (products.Length < quantities.Length)
+                {
+                    Array.Resize(ref products, quantities.Length);
+                }
+
+                for (int i = 0; i < products.Length; i++)
+                {
+                    <tr>
+                        <td>@(i + 1)</td>
+                        <td>@(products[i] ?? "")</td>
+                        @*<td>@(supplier != null ? supplier.First_Name : "")</td>*@
+                        <td>@(quantities[i] ?? "")</td>
+                        <td>@(tax[i] ?? "")</td>
+                        <td>@(ConUnit[i] ?? "")</td>
+
+                    </tr>
+                }
+                <div>
+                    <h3 style="font-size: 20px; font-weight:bold;">SO NO: @invoiceid</h3>
+                    <hr />
+                    <h3 style="font-weight: bold; font-size: 20px;color: red;"><span style="font-weight: bold;color: black; font-size: 20px;">Total Amount: </span> @(total)</h3>
+                    
+                    <h3 style="font-weight: bold; font-size: 20px;color: red;"><span style="font-weight: bold;color: black; font-size: 20px;">Customer Name: </span> @(supplier != null ? supplier.First_Name : "")</h3>
+                    <h3 style="font-weight: bold; font-size: 20px;color: red;"><span style="font-weight: bold;color: black; font-size: 20px;">Payment Term: </span> @(PaymentTerm) Days</h3>
+
+                 </div>
+            }
+        </tbody>
+    </table>
+</div>
+<button class="mk" onclick="generatePdf()">Invoice</button>
+<button class="mk2" onclick="generatePdf2()">Generate Deliverey Note Report</button>
+<script>
+    function generatePdf2() {
+        var printContents = document.getElementById("inv").innerHTML;
+        var pdfWindow = window.open("", "_blank");
+
+        var htmlContent = '<html><head><title>GOOD RECEIPT NOTE</title>';
+
+        // Add CSS styles for the PDF
+        htmlContent += '<style>';
+        htmlContent += 'body { font-family: Arial, sans-serif; }';
+        htmlContent += 'table { border-collapse: collapse; width: 100%; }';
+        htmlContent += 'th, td { padding: 8px; text-align: left; }';
+        htmlContent += 'th { background-color: #f2f2f2; }';
+        htmlContent += 'td { border-bottom: 1px solid #ddd; }';
+        htmlContent += '</style>';
+
+        htmlContent += '</head><body>';
+
+
+        // Add the rest of the printContents to the HTML content
+        htmlContent += printContents;
+
+        htmlContent += '</body></html>';
+
+        pdfWindow.document.write(htmlContent);
+        pdfWindow.document.close();
+
+        setTimeout(function () {
+            pdfWindow.print();
+            pdfWindow.close();
+        }, 500);
+    }
+    function generatePdf() {
+        var printContents = document.getElementById("inv").innerHTML;
+        var pdfWindow = window.open("", "_blank");
+
+        var htmlContent = '<html><head><title>AR Motors Invoice</title>';
+
+        // Add CSS styles for the PDF
+        htmlContent += '<style>';
+        htmlContent += 'body { font-family: Arial, sans-serif; }';
+        htmlContent += 'table { border-collapse: collapse; width: 100%; }';
+        htmlContent += 'th, td { padding: 8px; text-align: left; }';
+        htmlContent += 'th { background-color: #f2f2f2; }';
+        htmlContent += 'td { border-bottom: 1px solid #ddd; }';
+        htmlContent += '</style>';
+
+        htmlContent += '</head><body>';
+
+        // Add the image tag to the HTML content
+        htmlContent += '<img src="' + location.origin + '/Content/Images/logo.png" alt="logo" />';
+
+        // Add the rest of the printContents to the HTML content
+        htmlContent += printContents;
+
+        htmlContent += '</body></html>';
+
+        pdfWindow.document.write(htmlContent);
+        pdfWindow.document.close();
+
+        setTimeout(function () {
+            pdfWindow.print();
+            pdfWindow.close();
+        }, 500);
+    }
+</script>

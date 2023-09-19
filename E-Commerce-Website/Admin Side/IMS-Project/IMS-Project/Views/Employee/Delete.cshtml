@@ -1,0 +1,172 @@
+﻿@model IMS_Project.Models.admin_Employee
+
+@{
+    ViewBag.Title = "Employee";
+    ViewBag.SubTitle = "Delete";
+}
+
+<h3>Are you sure you want to delete this?</h3>
+<hr />
+<div class="row">
+    <div class="col-md-8">
+        <dl class="dl-horizontal ">
+            <dt>
+                @Html.DisplayNameFor(model => model.EmpID)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.EmpID)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.FirstName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.LastName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.LastName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Age)
+            </dt>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Password)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Age)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.DateofBirth)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.DateofBirth)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Gender)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Gender)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Address)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Address)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Phone)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Phone)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Mobile)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Mobile)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.InActive)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.InActive)
+            </dd>
+
+        </dl>
+    </div>
+    <div class="col-md-4">
+        <div>
+            <img src="~/Content/Images/ProfileImage.svg" alt="" class="img-thumbnail" width="160" height="160" />
+        </div>
+    </div>
+</div>
+
+@using (Html.BeginForm("Delete", "Employee", new { id = @Model.EmpID }, FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-actions no-color">
+        @Html.ActionLink("Back to List", "Index", null, new { @class = "" })
+        @*<input type="submit" value="Delete" class="btn btn-danger col-md-offset-1" onclick="deleteEmployee(event)" />*@
+        <input type="button" value="Delete" class="btn btn-danger col-md-offset-1" onclick="setInActive(event)" />
+
+    </div>
+}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    function setInActive(event) {
+        event.preventDefault(); // Prevent form submission
+
+        try {
+            if (confirm('Are you sure you want to set this Employee as InActive?')) {
+                // Perform AJAX request or form submission to set the product as InActive
+                $.ajax({
+                    url: '/Employee/SetInActive/@Model.EmpID',
+                    type: 'POST',
+                    data: {},
+                    success: function (response) {
+                        // Handle success, e.g., refresh the page or update UI
+                        window.location.reload();
+                    },
+                    error: function (xhr, status, error) {
+                        throw new Error(error); // Throw an exception if an error occurs
+                    }
+                });
+            }
+        } catch (error) {
+            alert('Error: ' + error); // Show error message in an alert box
+        }
+    }
+    function deleteEmployee(event) {
+        event.preventDefault(); // Prevent form submission
+
+        try {
+            if (confirm('Are you sure you want to delete this?')) {
+                // Perform AJAX request or form submission to delete the employee
+                $.ajax({
+                    url: '/Employee/Delete/@Model.EmpID',
+                    type: 'POST',
+                    data: {},
+                    success: function (response) {
+                        // Handle success, e.g., redirect to the list page
+                        window.location.href = '/Employee/Index';
+                    },
+                    error: function (xhr, status, error) {
+                        throw new Error(error); // Throw an exception if an error occurs
+                    }
+                });
+            }
+        } catch (error) {
+            alert('Error: ' + error); // Show error message in an alert box
+        }
+    }
+</script>
