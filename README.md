@@ -1,6 +1,80 @@
-# Ecommerce-Website-With-Admin-Panel-Of-ERP-CRM
-I develop this project in for ERP FYP Student.
+# 🛒 E-Commerce Website with Admin Panel of ERP System 🚀
 
+Welcome to the **E-Commerce Website with ERP System Admin Panel**, an all-in-one platform for managing sales, purchases, vendors, customers, inventory, and dynamic measurements. Designed using **C# MVC**, this modern system integrates e-commerce capabilities with a full-featured ERP backend to optimize and streamline business operations.
+
+---
+
+## 🎯 Features
+
+### 🌐 E-Commerce Website
+- **🛍️ Product Listings**: Display all products with filters for categories, price range, and attributes.
+- **🛒 Shopping Cart**: Add, remove, and update products in a dynamic cart.
+- **📄 Order Management**: Monitor order statuses, handle returns, and process payments.
+- **📧 Customer Login/Registration**: Secure authentication with personalized dashboards.
+- **💳 Payment Integration**: Multiple payment types supported for a smooth checkout experience.
+- **🏷️ Deals & Promotions**: Display dynamic deals and discount offers to boost sales.
+- **📦 Delivery Management**: Integration with delivery partners to track orders.
+
+---
+
+### 🛠️ ERP System (Admin Panel)
+#### 📊 Dashboard
+- **Modern UI**: Real-time analytics and data visualization for business metrics like sales, revenue, and inventory.
+
+#### 🛍️ Sales Management
+- **Sales Orders**: Manage and fulfill customer orders efficiently.
+- **Sales Quotations**: Generate and share detailed quotations with customers.
+
+#### 🛒 Purchase Management
+- **Purchase Orders**: Create and track vendor purchase orders.
+- **Purchase Quotations**: Manage, approve, or reject vendor quotations.
+- **Good Receipt Notes (GRN)**: Record goods received and reconcile them with purchase orders.
+
+#### 🏷️ Product Management
+- **Categories & Subcategories**: Organize products by type for efficient navigation.
+- **Dynamic Units of Measurement**: Manage inventory with flexible unit definitions.
+- **Inventory Management**: Real-time updates for stock levels and alerts for low inventory.
+
+#### 📃 Reports & Invoices
+- **Sales Reports**: Monitor sales performance by product, category, or customer.
+- **Purchase Reports**: Track vendor purchases and expenditures.
+- **Tax Reports**: Simplified tax tracking for compliance.
+- **Automated Invoices**: Generate invoices for sales and purchases.
+
+#### 💼 Vendor & Customer Management
+- Maintain detailed records for vendors and customers, including:
+  - Purchase/Sales history.
+  - Payment types and transaction details.
+
+#### ⚙️ Role-Based Access Control
+- Define user roles (e.g., admin, manager, salesperson) with custom permissions.
+
+#### 💸 Tax Management
+- Configure and apply taxes dynamically for products and invoices.
+
+#### 📦 Delivery & Shipment Management
+- Track shipments and assign delivery statuses.
+
+---
+
+## 🛑 Prerequisites
+
+Ensure you have the following installed before starting:
+1. **Visual Studio**: [Download Visual Studio](https://visualstudio.microsoft.com/)
+2. **SQL Server**: [Download SQL Server](https://www.microsoft.com/en-us/sql-server/)
+3. **.NET Framework**: Compatible version with the project.
+4. **Entity Framework**: For ORM and database management.
+
+---
+
+## 🛠️ Installation
+
+### Clone the Repository
+```bash
+git clone https://github.com/Muzamilofficial/ecommerce-erp-system.git
+cd ecommerce-erp-system
+
+# 📸 Screenshots of the Application 🖼️✨
 ![Admin Panel Database](https://github.com/Muzamilofficial/Ecommerce-Website-With-Admin-Panel-Of-ERP-CRM/assets/113015136/383f89bd-c039-4a52-820e-4865af8f7860)
 ![Client Side Diagram](https://github.com/Muzamilofficial/Ecommerce-Website-With-Admin-Panel-Of-ERP-CRM/assets/113015136/cc0ec8ec-e98d-4036-baa7-398a802e5242)
 ![3](https://github.com/Muzamilofficial/Ecommerce-Website-With-Admin-Panel-Of-ERP-CRM/assets/113015136/e62b3591-957a-47ea-8602-c077f8770e13)
