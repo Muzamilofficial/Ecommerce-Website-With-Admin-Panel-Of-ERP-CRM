@@ -67,13 +67,6 @@ Ensure you have the following installed before starting:
 
 ---
 
-## 🛠️ Installation
-
-### Clone the Repository
-```bash
-git clone https://github.com/Muzamilofficial/ecommerce-erp-system.git
-cd ecommerce-erp-system
-
 # 📸 Screenshots of the Application 🖼️✨
 ![Admin Panel Database](https://github.com/Muzamilofficial/Ecommerce-Website-With-Admin-Panel-Of-ERP-CRM/assets/113015136/383f89bd-c039-4a52-820e-4865af8f7860)
 ![Client Side Diagram](https://github.com/Muzamilofficial/Ecommerce-Website-With-Admin-Panel-Of-ERP-CRM/assets/113015136/cc0ec8ec-e98d-4036-baa7-398a802e5242)
